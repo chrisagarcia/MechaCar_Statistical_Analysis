@@ -22,7 +22,6 @@ It might be best not to predict future prototypes based on this linear model.
     <th></th>
     <th>Mean</th>
     <th>Median</th>
-    <th>Median</th>
     <th>Variance</th>
     <th>SD</th>
   </tr>
@@ -42,7 +41,6 @@ We can see from the total summary of suspension data that the mean PSI for all g
     <th></th>
     <th>Manufacturing_Lot</th>
     <th>Mean</th>
-    <th>Median</th>
     <th>Median</th>
     <th>Variance</th>
     <th>SD</th>
