@@ -77,14 +77,15 @@ Here the problem is clear. Lot3 shows a clear issue with the consistency of thei
 
 ## Suspension Data Testing
 
-*Lot1*
+**Lot1**
 ![Lot1 ttest](/ttest1.png)
-*Lot2*
+**Lot2**
 ![Lot2 ttest](/ttest2.png)
-*Lot3*
+**Lot3**
 ![Lot3 ttest](/ttest3.png)
 
 Lot1 and Lot2 suspension data get p < .05 and thus accept the null hypothesis, they do not significantly deviate from the population mean.
+
 The t-test for Lot3, however, calculates a p-value of 0.1589, thus the null-hypothesis is rejected, and we can say that the mean values of Lot3 and the population are statistically significant.
 
 ## Study Design: MechaCar vs Competition
@@ -100,23 +101,25 @@ We would want to limit this analysis, at least initially, to a specific city met
 
 The first task would to be to determine a sample size based on the estimated population driving both the MechaCar and the analagous competitors' cars. Using power analysis, we can predetermine how many entries our data needs to be relevant to the population. Next, we would need to collect that sample data into something like a .csv file.
 
-~ prices_df <- read.csv("prices.csv") ~
+~~~
+prices_df <- read.csv("prices.csv")
+~~~
 
 From there, we need to group the data by manufacturer, MechaCar, Nissan, Honda, etc... and determine wether both statistics (maintenance cost and average mpg) are normally distributed for each manufacturer. If not, we might need to throw out some outliers or combine the other manufacturers into one group.
 
 for each manufacturer being tested
-~
+~~~
 stats <- c("maintenance_price", "avg_mpg")
 for (col_name in stats) {
     shapiro.test(prices_df[col_name])
 }
-~
+~~~
 
 If they are all normally distributed, we can then move on to using a t-test to find out if the differnece in the means of the MechaCar prices and the population prices are genuinely impactful.
 
-~
+~~~
 mecha <- subset(prices_df, manufacturer=="MechaCar")
 for (col_name in stats) {
     t.test(mecha[col_name], mu=mean(prices_df[col_name]))
 }
-~
+~~~
