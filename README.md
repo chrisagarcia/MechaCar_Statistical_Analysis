@@ -4,7 +4,7 @@ R analysis of MechaCar data
 
 ## Linear Regression of Prototype MPG
 
-The variable that are shown to play a non-random role in linear regression are:
+The variables shown to play a non-random role in linear regression are:
     the intercept
     vehicle_length
     ground_clearance
