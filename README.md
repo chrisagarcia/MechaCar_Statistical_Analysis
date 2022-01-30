@@ -5,9 +5,17 @@ R analysis of MechaCar data
 ## Linear Regression of Prototype MPG
 
 The variables shown to play a non-random role in linear regression are:
-    the intercept
-    vehicle_length
-    ground_clearance
+<ol>
+    <li>
+        the intercept
+    </li>
+    <li>
+        vehicle_length
+    </li>
+    <li>
+        ground_clearance
+    </li>
+</ol>
 
 The p-value for our linear regression model is far below the standard significance level of 0.05
 For this reason, we can reject the null hypothesis to determine that the slope of our linear regression is not 0
